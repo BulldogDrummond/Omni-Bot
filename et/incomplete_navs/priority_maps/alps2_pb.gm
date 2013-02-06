@@ -1,0 +1,419 @@
+//==========================================================================================
+//
+//	alps2_pb.gm
+//
+//	Who       	When		What
+//------------------------------------------------------------------------------------------
+//	^1[UJE]^3Niek	02 February 2013	Initial Script
+//
+//==========================================================================================
+//
+
+global Map =
+{
+	Debug = 0, // please set to zero before distributing your script
+	ShowMovers = false,
+
+	Command_Post_Dyno = 0,
+	Fuel_Store_Dyno = 0,
+	Mine_Entrance_Dyno = 0,
+	North_Anti_Tank_Gun_Dyno = 0,
+	North_Anti_Tank_Gun_1_Dyno = 0,
+	South_Anti_Tank_Gun_Dyno = 0,
+	South_Anti_Tank_Gun_1_Dyno = 0,
+	Truck_Dyno = false,
+	Tunnel_Blockage_Dyno = 0,
+	Tunnel_Blockage_1_Dyno = 0,
+
+	South_Anti_Tank_Gun_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_Dyno += 1;
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_Planted" );
+	},
+
+	South_Anti_Tank_Gun_1_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_1_Dyno += 1;
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_1_Planted" );
+	},
+
+	Allied_South_GUN_spawn_Built = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Util.MapDebugPrint( "Allied_South_GUN_spawn_Built" );
+	},
+
+	Command_Post_Built = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Util.MapDebugPrint( "Command_Post_Built" );
+	},
+
+	Mine_Entrance_Built = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Util.MapDebugPrint( "Mine_Entrance_Built" );
+	},
+
+	Command_Post_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Command_Post_Dyno += 1;
+		Util.MapDebugPrint( "Command_Post_Planted" );
+	},
+
+	Fuel_Store_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Fuel_Store_Dyno += 1;
+		Util.MapDebugPrint( "Fuel_Store_Planted" );
+	},
+
+	Mine_Entrance_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Mine_Entrance_Dyno += 1;
+		Util.MapDebugPrint( "Mine_Entrance_Planted" );
+	},
+
+	North_Anti_Tank_Gun_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_Dyno += 1;
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_Planted" );
+	},
+
+	North_Anti_Tank_Gun_1_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_1_Dyno += 1;
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_1_Planted" );
+	},
+
+	Tunnel_Blockage_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_Dyno += 1;
+		Util.MapDebugPrint( "Tunnel_Blockage_Planted" );
+	},
+
+	Tunnel_Blockage_1_Planted = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_1_Dyno += 1;
+		Util.MapDebugPrint( "Tunnel_Blockage_1_Planted" );
+	},
+
+	Command_Post_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Command_Post_Dyno -= 1;
+		Util.MapDebugPrint( "Command_Post_Defused" );
+	},
+
+	Fuel_Store_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Fuel_Store_Dyno -= 1;
+		Util.MapDebugPrint( "Fuel_Store_Defused" );
+	},
+
+	Mine_Entrance_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Mine_Entrance_Dyno -= 1;
+		Util.MapDebugPrint( "Mine_Entrance_Defused" );
+	},
+
+	North_Anti_Tank_Gun_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_Dyno -= 1;
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_Defused" );
+	},
+
+	North_Anti_Tank_Gun_1_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_1_Dyno -= 1;
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_1_Defused" );
+	},
+
+	South_Anti_Tank_Gun_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_Dyno -= 1;
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_Defused" );
+	},
+
+	South_Anti_Tank_Gun_1_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_1_Dyno -= 1;
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_1_Defused" );
+	},
+
+	Tunnel_Blockage_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_Dyno -= 1;
+		Util.MapDebugPrint( "Tunnel_Blockage_Defused" );
+	},
+
+	Tunnel_Blockage_1_Defused = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_1_Dyno -= 1;
+		Util.MapDebugPrint( "Tunnel_Blockage_1_Defused" );
+	},
+
+	Command_Post_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Command_Post_Dyno = 0;
+
+		Util.MapDebugPrint( "Command_Post_Destroyed" );
+	},
+
+	Fuel_Store_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Fuel_Store_Dyno = 0;
+
+		Util.MapDebugPrint( "Fuel_Store_Destroyed" );
+	},
+
+	Mine_Entrance_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Mine_Entrance_Dyno = 0;
+
+		Util.MapDebugPrint( "Mine_Entrance_Destroyed" );
+	},
+
+	North_Anti_Tank_Gun_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_Dyno = 0;
+
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_Destroyed" );
+	},
+
+	North_Anti_Tank_Gun_1_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.North_Anti_Tank_Gun_1_Dyno = 0;
+
+		Util.MapDebugPrint( "North_Anti_Tank_Gun_1_Destroyed" );
+	},
+
+	South_Anti_Tank_Gun_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_Dyno = 0;
+
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_Destroyed" );
+	},
+
+	South_Anti_Tank_Gun_1_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.South_Anti_Tank_Gun_1_Dyno = 0;
+
+		Util.MapDebugPrint( "South_Anti_Tank_Gun_1_Destroyed" );
+	},
+
+	Tunnel_Blockage_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_Dyno = 0;
+
+		Util.MapDebugPrint( "Tunnel_Blockage_Destroyed" );
+	},
+
+	Tunnel_Blockage_1_Destroyed = function( trigger )
+	{
+		if ( TestMap )
+			{ return; }
+
+		Map.Tunnel_Blockage_1_Dyno = 0;
+
+		Util.MapDebugPrint( "Tunnel_Blockage_1_Destroyed" );
+	},
+
+};
+
+global OnMapLoad = function()
+{
+	if ( TestMapOn )
+		{ Util.AutoTestMap(); }
+
+	// Register callback functions
+	OnTrigger( "MISSING_STRING", Map.Allied_South_GUN_spawn_Built );
+	OnTrigger( "MISSING_STRING", Map.Command_Post_Built );
+	OnTrigger( "MISSING_STRING", Map.Mine_Entrance_Built );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.Command_Post_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.Fuel_Store_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.Mine_Entrance_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.North_Anti_Tank_Gun_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.North_Anti_Tank_Gun_1_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.South_Anti_Tank_Gun_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.South_Anti_Tank_Gun_1_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.Tunnel_Blockage_Planted );
+	OnTrigger( "Planted at the MISSING_STRING.", Map.Tunnel_Blockage_1_Planted );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.Command_Post_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.Fuel_Store_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.Mine_Entrance_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.North_Anti_Tank_Gun_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.North_Anti_Tank_Gun_1_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.South_Anti_Tank_Gun_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.South_Anti_Tank_Gun_1_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.Tunnel_Blockage_Defused );
+	OnTrigger( "Defused at the MISSING_STRING.", Map.Tunnel_Blockage_1_Defused );
+	OnTrigger( "MISSING_STRING", Map.Command_Post_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.Fuel_Store_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.Mine_Entrance_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.North_Anti_Tank_Gun_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.North_Anti_Tank_Gun_1_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.South_Anti_Tank_Gun_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.South_Anti_Tank_Gun_1_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.Tunnel_Blockage_Destroyed );
+	OnTrigger( "MISSING_STRING", Map.Tunnel_Blockage_1_Destroyed );
+
+	//~Util.DisableGoal( ".*", true ); // all but routes
+	//~SetAvailableMapGoals( TEAM.AXIS, true, "ATTACK_.*" );
+	//~SetAvailableMapGoals( TEAM.ALLIES, true, "ATTACK_.*" );
+
+	// Max users per goal
+	Util.SetMaxUsers( 1, "ATTACK_.*" );
+	Util.SetMaxUsers( 1, "DEFEND_.*" );
+	Util.SetMaxUsers( 1, "GRENADE_.*" );
+	Util.SetMaxUsers( 1, "SNIPE_.*" );
+	Util.SetMaxUsers( 1, "MOUNTMG42_.*" );
+	Util.SetMaxUsers( 1, "MOBILEMG42_.*" );
+	Util.SetMaxUsers( 1, "MOBILEMORTAR_.*" );
+	Util.SetMaxUsers( 1, "AIRSTRIKE_.*" );
+	Util.SetMaxUsers( 1, "CALLARTILLERY_.*" );
+
+	// Camp times
+	SetMapGoalProperties( "MOUNTMG42_.*", {MinCampTime=15, MaxCampTime=90} );
+	SetMapGoalProperties( "MOBILEMG42_.*", {MinCampTime=10, MaxCampTime=60} );
+
+
+	Util.MapDebugPrint( "Omni-bot map script for " + GetMapName() + " executed." );
+};
+
+global OnBotJoin = function( bot )
+{
+	// Uncomment for shootable breakables
+	//~bot.TargetBreakableDist = 90.0;
+	// Only set MaxViewDistance on maps with limited sight (e.g. fog)
+	//~bot.MaxViewDistance = 2400;
+};
+
+global InitializeRoutes = function()
+{
+	MapRoutes =
+	{
+		PLANT_South_Anti_Tank_Gun_1 =
+		{
+		},
+		BUILD_Command_Post =
+		{
+		},
+		BUILD_Mine_Entrance =
+		{
+		},
+		BUILD_Allied_South_GUN_spawn =
+		{
+		},
+		BUILD_Fuel_Store =
+		{
+		},
+		PLANT_North_Anti_Tank_Gun =
+		{
+		},
+		PLANT_North_Anti_Tank_Gun_1 =
+		{
+		},
+		PLANT_Command_Post =
+		{
+		},
+		PLANT_Fuel_Store =
+		{
+		},
+		PLANT_Tunnel_Blockage_1 =
+		{
+		},
+		PLANT_Mine_Entrance =
+		{
+		},
+		PLANT_South_Anti_Tank_Gun =
+		{
+		},
+		PLANT_Tunnel_Blockage =
+		{
+		},
+	};
+	Util.Routes(MapRoutes);
+};

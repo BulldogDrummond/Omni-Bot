@@ -1,0 +1,47 @@
+***********************************************
+* XBrackets Lite for Notepad++ 5.1 (and above)
+* by DV, Jan - Feb 2009
+***********************************************
+
+XBrackets Lite allows to autocomplete brackets ([{""}]) i.e. it inserts
+corresponding right bracket when the left bracket is typed.
+The plugin uses "smart" autocompletion:
+- next character is analysed for ([{ brackets;
+- next & previous characters are analysed for " quote.
+
+This plugin is a Notepad++'es port of my XBrackets plugin for AkelPad. 
+As Scintilla highlights pair brackets by itself, XBrackets Lite doesn't 
+do this (unlike XBrackets for AkelPad) - therefore I call it "XBrackets Lite".
+
+* Special option "FileExtsRule" inside the file "XBrackets.ini" allows to
+specify file extensions which will be supported or ignored by XBrackets.
+Examples:
+  ; tells XBrackets to support ANY file (by default)
+  FileExtsRule=
+  ; the same
+  FileExtsRule=+
+  ; the same
+  FileExtsRule=-
+  
+  ; tells XBrackets to support ONLY .txt .ini .htm .html .xml files
+  FileExtsRule=+txt ini htm html xml
+  
+  ; tells XBrackets to support ANY file EXCEPT .c .cpp .cxx .h .hpp .hxx
+  FileExtsRule=-c cpp cxx h hpp hxx
+
+
+*************
+*  History  *
+*************
+
+
+v1.1 - Feb 2009
+---------------
+* plugin's core updated (the same as in NppExecPluginMsgTester v0.3 RC1)
+* plugin is automatically disabled while recording or playing a macro
+* new option "FileExtsRule" inside "XBrackets.ini"
+
+
+v1.0 - Jan 2009
+---------------
+* initial version

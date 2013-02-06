@@ -1,0 +1,65 @@
+<NotepadPlus>
+    <InternalCommands>
+        <Shortcut id="42014" Ctrl="yes" Alt="no" Shift="no" Key="38" />
+        <Shortcut id="42015" Ctrl="yes" Alt="no" Shift="no" Key="40" />
+        <Shortcut id="50001" Ctrl="yes" Alt="no" Shift="no" Key="74" />
+        <Shortcut id="47008" Ctrl="no" Alt="no" Shift="no" Key="112" />
+        <Shortcut id="47000" Ctrl="no" Alt="no" Shift="yes" Key="112" />
+        <Shortcut id="41003" Ctrl="yes" Alt="no" Shift="no" Key="115" />
+        <Shortcut id="44009" Ctrl="no" Alt="no" Shift="yes" Key="122" />
+        <Shortcut id="41008" Ctrl="no" Alt="no" Shift="no" Key="123" />
+        <Shortcut id="41014" Ctrl="yes" Alt="no" Shift="no" Key="82" />
+        <Shortcut id="43045" Ctrl="no" Alt="no" Shift="no" Key="120" />
+        <Shortcut id="44032" Ctrl="yes" Alt="no" Shift="no" Key="122" />
+        <Shortcut id="44034" Ctrl="no" Alt="no" Shift="no" Key="122" />
+        <Shortcut id="44025" Ctrl="yes" Alt="no" Shift="yes" Key="87" />
+        <Shortcut id="42024" Ctrl="yes" Alt="no" Shift="no" Key="84" />
+        <Shortcut id="42013" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <Shortcut id="42012" Ctrl="no" Alt="no" Shift="no" Key="0" />
+    </InternalCommands>
+    <Macros>
+        <Macro name="&amp;Trim trailing whitespace and save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
+            <Action type="2" message="0" wParam="42024" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="41006" lParam="0" sParam="" />
+        </Macro>
+    </Macros>
+    <UserDefinedCommands>
+        <Command name="Launch in &amp;Firefox" Ctrl="yes" Alt="yes" Shift="yes" Key="88">firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in I&amp;E" Ctrl="yes" Alt="yes" Shift="yes" Key="73">iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in C&amp;hrome" Ctrl="yes" Alt="yes" Shift="yes" Key="82">chrome &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in &amp;Safari" Ctrl="yes" Alt="yes" Shift="yes" Key="70">safari &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Get &amp;PHP help" Ctrl="yes" Alt="yes" Shift="yes" Key="112">http://www.php.net/%20$(CURRENT_WORD)</Command>
+        <Command name="&amp;Google Search" Ctrl="no" Alt="yes" Shift="no" Key="113">http://www.google.com/search?q=$(CURRENT_WORD)</Command>
+        <Command name="&amp;Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">http://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
+        <Command name="Open &amp;selected file" Ctrl="no" Alt="yes" Shift="no" Key="116">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD)</Command>
+        <Command name="Open selected file in another &amp;instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD) -nosession -multiInst</Command>
+        <Command name="Open current folder in E&amp;xplorer" Ctrl="no" Alt="no" Shift="no" Key="0">explorer $(CURRENT_DIRECTORY)</Command>
+        <Command name="Open &amp;cmd.exe in current folder" Ctrl="no" Alt="no" Shift="no" Key="0">cmd /K cd $(CURRENT_DIRECTORY)</Command>
+        <Command name="Run current file with &amp;cmd.exe" Ctrl="no" Alt="no" Shift="no" Key="0">cmd.exe /K &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Shell e&amp;xecute current file" Ctrl="no" Alt="no" Shift="no" Key="0">&quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="g&amp;mcompiler" Ctrl="no" Alt="no" Shift="no" Key="0">&quot;$(NPP_DIRECTORY)\bin\gmcomp.cmd&quot; &quot;$(FULL_CURRENT_PATH)&quot; &quot;$(NPP_DIRECTORY)\bin&quot;</Command>
+        <Command name="Search Omni-&amp;bot Wiki" Ctrl="no" Alt="yes" Shift="no" Key="112">http://www.omni-bot.com/wiki/index.php?search=$(CURRENT_WORD)&amp;fulltext=Search</Command>
+    </UserDefinedCommands>
+    <PluginCommands>
+        <PluginCommand moduleName="QuickText.dll" internalID="0" Ctrl="yes" Alt="no" Shift="no" Key="13" />
+        <PluginCommand moduleName="NppTextFX.dll" internalID="27" Ctrl="yes" Alt="no" Shift="yes" Key="40" />
+        <PluginCommand moduleName="NppTextFX.dll" internalID="26" Ctrl="yes" Alt="no" Shift="yes" Key="38" />
+        <PluginCommand moduleName="SpellChecker.dll" internalID="0" Ctrl="no" Alt="no" Shift="no" Key="118" />
+        <PluginCommand moduleName="NppTextFX.dll" internalID="85" Ctrl="no" Alt="yes" Shift="no" Key="73" />
+        <PluginCommand moduleName="NppTextFX.dll" internalID="60" Ctrl="yes" Alt="no" Shift="yes" Key="67" />
+        <PluginCommand moduleName="NppTextFX.dll" internalID="61" Ctrl="yes" Alt="no" Shift="yes" Key="88" />
+        <PluginCommand moduleName="NppExec.dll" internalID="20" Ctrl="yes" Alt="no" Shift="no" Key="120" />
+        <PluginCommand moduleName="NppExec.dll" internalID="21" Ctrl="yes" Alt="no" Shift="yes" Key="120" />
+        <PluginCommand moduleName="MultiClipboard.dll" internalID="0" Ctrl="no" Alt="no" Shift="no" Key="0" />
+    </PluginCommands>
+    <ScintillaKeys>
+        <ScintKey ScintID="2373" menuCmdID="44033" Ctrl="yes" Alt="no" Shift="no" Key="96" />
+        <ScintKey ScintID="2338" menuCmdID="0" Ctrl="yes" Alt="no" Shift="no" Key="76" />
+        <ScintKey ScintID="2337" menuCmdID="0" Ctrl="yes" Alt="no" Shift="yes" Key="76" />
+        <ScintKey ScintID="2455" menuCmdID="0" Ctrl="yes" Alt="no" Shift="yes" Key="68" />
+        <ScintKey ScintID="2390" menuCmdID="0" Ctrl="yes" Alt="no" Shift="no" Key="188" />
+        <ScintKey ScintID="2391" menuCmdID="0" Ctrl="yes" Alt="no" Shift="yes" Key="188" />
+        <ScintKey ScintID="2392" menuCmdID="0" Ctrl="yes" Alt="no" Shift="no" Key="190" />
+        <ScintKey ScintID="2393" menuCmdID="0" Ctrl="yes" Alt="no" Shift="yes" Key="190" />
+    </ScintillaKeys>
+</NotepadPlus>
